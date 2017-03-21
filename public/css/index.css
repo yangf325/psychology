@@ -1,0 +1,101 @@
+.index{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+  background-color: #ffffff;
+  background-image: url(../img/overlay.png), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(../img/bg.jpg);
+  background-image: url(../img/overlay.png), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(../img/bg.jpg);
+  background-image: url(../img/overlay.png), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url(../img/bg.jpg);
+  background-repeat: repeat,	no-repeat,	no-repeat;
+  background-size: 100px 100px, cover,	cover;
+  background-position: top left,	center center,	bottom center;
+  background-attachment: fixed,	fixed,	fixed;
+}
+.index-left,.index-right{
+	transition: .4s all;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	cursor: pointer;
+	left: 200px;
+	position: absolute;
+	width:100px;
+	height: 100px;
+	top:40%;
+	margin-top: -10px;
+	background:url(../img/arr.png) 20px 0px no-repeat;
+	background-size: auto 100%;
+}
+.index-left:hover,.index-right:hover{
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+}
+.index-right{
+	left: auto;
+	right:200px;
+	background-position: -195px 0px;
+}
+.wrap{
+	height: 100%;
+	padding-top: 88px;
+}
+.psy-li{
+	transition: opacity 1s ease, transform 1s ease;
+	width: 400px;
+	height: 450px;
+	background-color: #fff;
+	opacity: 0.95;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	border-radius: 5px;
+	padding:66px 44px 44px;
+}
+
+.li-top img{
+	width:122px;
+	height: 122px;
+	border-radius: 50%;
+	margin-left:95px;
+}
+.li-top>span{
+	position: absolute;
+	height: 1px;
+	width:115px;
+	border-top:1px solid #c8cccf;
+  top: 126px;
+  z-index: -1;
+  right:0px;
+}
+.li-top>span:first-child{
+	left:0px;
+	right: auto;
+}
+.li-title{
+	font-size: 1.85em;
+  letter-spacing: 0.22em;
+  margin: 0 0 0.525em 0;
+	text-align: center;
+	margin-top: 33px;
+}
+.li-info{
+	margin-top:33px;
+	text-align: center;
+}
+.li-btn{
+	width:160px;
+	margin: 55px auto 0px;
+	display:block;
+	transition: .4s all ;
+	outline: none;
+}
+#li2{
+	left:2000px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+#li3{
+	left:-1000px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+}

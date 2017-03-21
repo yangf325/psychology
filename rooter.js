@@ -11,6 +11,7 @@ var testPageCon = require('./lib/controller/testPageCon');
 var testResultCon = require('./lib/controller/testResultCon');
 var messBoardCon = require('./lib/controller/messBoardCon');
 
+myRoot.get('/',indexCon.test);
 myRoot.get('/index',indexCon.test);
 
 

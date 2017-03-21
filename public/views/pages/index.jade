@@ -2,6 +2,39 @@ doctype
 html
 	head
 		meta(charset="UTF-8")
-		title #{title}
+		title 心理测评系统
+		include ../includes/head
+		link(rel="stylesheet", href="css/index.css")
 	body
-		h1 #{title}
+		.index
+			.wrap
+				.index-left
+				.index-right
+				ul.psy-ul
+					li#li1.psy-li
+						.li-top
+							span
+							img(src="../../img/li1.jpg")
+							span
+						h1.li-title 美文欣赏
+						p.li-info GET TO KNOW YOURSELF
+						button.btn.btn-info.li-btn 开 始
+					li#li2.psy-li
+						.li-top
+							span
+							img(src="../../img/li2.jpg")
+							span
+						h1.li-title 心理测试
+						p.li-info GET TO KNOW YOURSELF
+						button.btn.btn-info.li-btn 开 始
+					li#li3.psy-li
+						.li-top
+							span
+							img(src="../../img/li3.jpg")
+							span
+						h1.li-title 留言咨询
+						p.li-info GET TO KNOW YOURSELF
+						button.btn.btn-info.li-btn 开 始
+			.copyRight
+		script(src="../../js/index.js")
+
