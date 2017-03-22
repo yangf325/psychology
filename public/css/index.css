@@ -39,7 +39,7 @@
 	padding-top: 88px;
 }
 .psy-li{
-	transition: opacity 1s ease, transform 1s ease;
+	/*transition: opacity 1s ease, transform 1s ease;*/
 	width: 400px;
 	height: 450px;
 	background-color: #fff;
@@ -91,11 +91,34 @@
 }
 #li2{
 	left:2000px;
-	opacity: 0;
+	/*opacity: 0;*/
 	filter:alpha(opacity=0);
 }
 #li3{
 	left:-1000px;
-	opacity: 0;
+	/*opacity: 0;*/
 	filter:alpha(opacity=0);
+}
+
+@keyframes bigger{
+	from{
+		opacity: 0.9;
+		transform: scale(1.0);
+	}
+	to{
+		opacity: 0;
+		transform: scale(1.5);
+	}
+}
+.biggerLi{
+	animation:bigger 1s alternate 1 ;
+	animation-fill-mode: forwards;
+}
+.copyRight{
+	position: relative;
+	bottom: 60px;
+}
+.copyInfo{
+	text-align:center;
+
 }
