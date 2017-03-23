@@ -9,7 +9,6 @@ var app = express();
 
 //加载本地路由
 var rooter=require('./rooter');
-app.use('/',rooter);
 
 // mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost:27017/psy');
@@ -17,8 +16,10 @@ mongoose.connect('mongodb://localhost:27017/psy');
 app.set('views', path.join(__dirname, '/public/views/pages'));
 app.set('view engine','jade');
 
-app.use(bodyParser.json());//数据表单格式化
-app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use('/',rooter);
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname,'bower_components')));

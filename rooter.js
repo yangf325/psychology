@@ -11,14 +11,14 @@ var testPageCon = require('./lib/controller/testPageCon');
 var testResultCon = require('./lib/controller/testResultCon');
 var messBoardCon = require('./lib/controller/messBoardCon');
 
-myRoot.get('/',indexCon.test);
-myRoot.get('/index',indexCon.test);
+//管理页面
+var testAdminCon = require('./lib/controller/testAdminCon');
 
 
-
-
-
-
+myRoot.get('/',indexCon.getted);
+myRoot.get('/index',indexCon.getted);
+myRoot.get('/testAdmin',testAdminCon.getted);
+myRoot.post('/testAdmin',testAdminCon.posted);
 
 
 

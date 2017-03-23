@@ -1,0 +1,49 @@
+doctype
+html
+	head
+		meta(charset="UTF-8")
+		title #{title}
+		include ../includes/head
+		link(rel="stylesheet", href="css/admin.css")
+	body
+		.container
+			.wraps
+				form(action="/testAdmin",method="post")
+					.form-group.col-md-12
+						label 问题
+						input.form-control(type="textarea" name="questBody")
+					.form-group.col-md-6
+						label 选项A
+						input.form-control(type="textarea" name="answerA")
+					.form-group.col-md-6
+						label 选项B
+						input.form-control(type="textarea"  name="answerB")
+					.form-group.col-md-6
+						label 选项C
+						input.form-control(type="textarea"  name="answerC")
+					.form-group.col-md-6
+						label 选项D
+						input.form-control(type="textarea"  name="answerD")
+					.form-group.col-md-6
+						label 分类
+						input.form-control(type="textarea"  name="kind")
+					.form-group.col-md-6
+						label 权值
+						input.form-control(type="textarea"  name="power")
+					.form-group
+						button.btn.btn-primary(type="submit" value="submit") 提交
+			.wraps
+				table.table.table-hover.table-bordered
+					thead
+						tr
+							th 问题
+							th 选项A
+							th 选项B
+							th 选项C
+							th 选项D
+							th 分类
+							th 权值
+					tbody
+						//- each trs in quesModel
+						//- 	each val, index in trs
+						//- 		li= val
